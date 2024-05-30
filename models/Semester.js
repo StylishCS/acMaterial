@@ -6,6 +6,11 @@ const semesterSchema = new mongoose.Schema(
       required: true,
       enum: [1, 2],
     },
+    correspondingYear: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "Year",
+    },
     courses: {
       type: [mongoose.Schema.Types.ObjectId],
       required: true,

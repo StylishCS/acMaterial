@@ -1,0 +1,38 @@
+[
+    {
+        "courseName": "System analysis",
+        "playlist": "https://youtube.com/playlist?list=PL9ymkgltH7yHnq2sBAiN0iGTmE3KLLu94&si=kRe5j1U85ZakIpe7",
+        "playlist2": "https://drive.google.com/drive/folders/0BwzhbGIu7zO5SW9wNldtLW1NdUk?resourcekey=0-A-dRkUcFlQprtEZPn9SN0g&usp=drive_link",
+        "drive": "https://drive.google.com/drive/u/3/folders/18pZnVYS-4yqHuGY7_kc_2ecz2_qO4WeW",
+        "importantNotes": [
+            {
+                "quote": "كلام الدكتور في اخر محاضرة",
+                "list": [
+                    {
+                        "text": "الامتحان نفس شكل الامتحانات  القديمة "
+                    },
+                    {
+                        "text": "سكشن ال DFD مهم جدا و هتلاقيه في الrevision هنا "
+                    }
+                ]
+            }
+        ],
+        "weeks": [
+            {
+                "weekName": "Final Exams",
+                "resources": [
+                    {
+                        "icon": "fa-brands fa-google-drive",
+                        "text": "Drive Link",
+                        "link": "https://drive.google.com/drive/folders/1NuP_Tzg_lBL2jZWA2hHQdxn93LvdkWvc?usp=drive_link"
+                    },
+                    {
+                        "icon": "fas fa-image",
+                        "text": "System-approaches Answer",
+                        "link": "https://postimg.cc/mh9f6FW1"
+                    }
+                ]
+            }
+        ]
+    }
+]

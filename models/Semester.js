@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
-const { Course } = require("./Course");
 const semesterSchema = new mongoose.Schema(
   {
     courses: {
-      type: [Course],
+      type: [mongoose.Schema.Types.ObjectId],
       required: true,
       ref: "Course",
     },

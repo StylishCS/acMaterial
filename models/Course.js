@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const { Year } = require("./Year");
-const { Semester } = require("./Semester");
 
 const importantNotesSchema = new mongoose.Schema({
   quote: {
@@ -16,12 +14,12 @@ const resourceSchema = new mongoose.Schema({
   icon: {
     type: String,
     required: true,
-    maxLength: 255,
+    maxlength: 255,
   },
   text: {
     type: String,
     required: true,
-    maxLength: 255,
+    maxlength: 255,
   },
   link: {
     type: String,
@@ -33,8 +31,8 @@ const weekSchema = new mongoose.Schema({
   weekName: {
     type: String,
     required: true,
-    minLength: 2,
-    maxLength: 255,
+    minlength: 2,
+    maxlength: 255,
   },
   resources: {
     type: [resourceSchema],
@@ -47,23 +45,23 @@ const courseSchema = new mongoose.Schema(
     courseName: {
       type: String,
       required: true,
-      minLength: 2,
-      maxLength: 255,
+      minlength: 2,
+      maxlength: 255,
     },
     playlist: {
       type: String,
       required: false,
-      minLength: 2,
+      minlength: 2,
     },
     playlist2: {
       type: String,
       required: false,
-      minLength: 2,
+      minlength: 2,
     },
     drive: {
       type: String,
       required: false,
-      minLength: 2,
+      minlength: 2,
     },
     importantNotes: {
       type: [importantNotesSchema],
@@ -74,12 +72,12 @@ const courseSchema = new mongoose.Schema(
       required: false,
     },
     year: {
-      type: Year,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "Year",
     },
     semester: {
-      type: Semester,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "Semester",
     },

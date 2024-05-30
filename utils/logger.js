@@ -1,29 +1,21 @@
 const { ErrorLog } = require("../models/ErrorLog");
 const { Log } = require("../models/Log");
 
-async function logError(err, controller) {
+async function logError(err, action) {
   const log = new ErrorLog({
     err: err.message,
-    controller: controller,
+    action: action,
   });
   await log.save();
 }
-async function loginLog(user) {
+
+async function logAction(user, action, status, message) {
   try {
     const log = new Log({
-      action: "User Logged In",
+      action: action,
       user: user,
-    });
-    await log.save();
-  } catch (error) {
-    logError(error, "Log Util");
-  }
-}
-async function createAdminLog(user) {
-  try {
-    const log = new Log({
-      action: "Admin Created",
-      user: user,
+      status: status,
+      message: message,
     });
     await log.save();
   } catch (error) {
@@ -31,4 +23,4 @@ async function createAdminLog(user) {
   }
 }
 
-module.exports = { loginLog, logError, createAdminLog };
+module.exports = { logError, logAction };

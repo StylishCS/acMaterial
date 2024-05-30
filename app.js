@@ -9,11 +9,15 @@ const mongoose = require("mongoose");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const { logError } = require("./utils/logger");
 
 mongoose
   .connect(process.env.CONNECTION_STRING)
   .then(() => console.log("Connected to MongoDB.."))
-  .catch((err) => console.error("MongoDB Connection Failed..", err));
+  .catch((err) => {
+    logError(err.message, "Database Connection");
+    console.error("MongoDB Connection Failed..", err);
+  });
 
 var app = express();
 

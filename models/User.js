@@ -4,19 +4,19 @@ const userSchema = new mongoose.Schema(
     username: {
       type: String,
       required: true,
-      minLength: 2,
-      maxLength: 255,
+      minlength: 2,
+      maxlength: 255,
     },
     password: {
       type: String,
       required: true,
-      minLength: 2,
-      maxLength: 255,
+      minlength: 2,
+      maxlength: 255,
     },
     createdBy: {
-      type: User,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
       required: false,
-      default: null,
     },
   },
   { timestamps: true }

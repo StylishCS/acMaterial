@@ -1,17 +1,24 @@
 const mongoose = require("mongoose");
-const { User } = require("./User");
 const logSchema = new mongoose.Schema(
   {
     action: {
       type: String,
       required: true,
-      minLength: 2,
-      maxLength: 255,
+      minlength: 2,
+      maxlength: 255,
     },
     user: {
-      type: User,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "User",
+    },
+    status: {
+      type: Number,
+      required: true,
+    },
+    message: {
+      type: String,
+      required: false,
     },
   },
   { timestamps: true }

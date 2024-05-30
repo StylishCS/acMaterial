@@ -4,11 +4,11 @@ const errorLogSchema = new mongoose.Schema(
     err: {
       type: String,
       required: true,
-      minLength: 2,
-      maxLength: 255,
+      minlength: 2,
+      maxlength: 255,
     },
-    controller: {
-      type: string,
+    action: {
+      type: String,
       required: true,
     },
   },

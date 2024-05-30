@@ -1,7 +1,8 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
+const bcrypt = require("bcrypt");
+const { adminLoginController } = require("../controllers/admin.controller");
 
-router.post("/login");
-router.post("/signup");
+router.post("/login", adminLoginController);
 
 module.exports = router;

@@ -60,4 +60,6 @@ async function createAdminController(req, res) {
   }
 }
 
+/** End of Authentication Controllers */
+
 module.exports = { adminLoginController, createAdminController };
